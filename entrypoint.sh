@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh -ex
 
 # GitLab CI doesn't allow us to run containers with arbitrary args
 # and executes a shell instead. I'd wish for just a `cd $GITLAB_PROJECT_DIR` here.
