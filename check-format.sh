@@ -17,7 +17,7 @@ revision=$(git rev-parse --verify origin/${revisionArg} 2>/dev/null) || {
 
 [ -n "${revision}" ] || { echo "Error: Programmer is an idiot" >&2; exit 1; }
 
-for commit in $(git rev-list --reverse HEAD ^${revision}); do
+for commit in $(git rev-list --reverse "HEAD...^${revision}"); do
     echo -n "${commit}..."
     cfOutput="$(git -c color.ui=always clang-format --diff "${commit}^" "${commit}" -- "$@")";
     if [ -z "${cfOutput}" ] || [ "${cfOutput}" = "no modified files to format" ]; then
