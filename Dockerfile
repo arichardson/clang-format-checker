@@ -16,7 +16,8 @@ ADD ${GH_URL}/clang-format-3.9_linux-amd64  \
     ${GH_URL}/clang-format-10_linux-amd64   \
     ${GH_URL}/clang-format-11_linux-amd64   \
     ${GH_URL}/clang-format-12_linux-amd64   \
-    entrypoint.sh                           \
+    /usr/local/bin/
+ADD entrypoint.sh                           \
     check-format.sh                         \
     set-clang-version                       \
     clang-format_linux.sha512sums           \
