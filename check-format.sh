@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -ex
 
 exitCode=0
 [ -z "$(echo -e)" ] || { echo "Error: needs echo with -e support" >&2; exit 1; }
