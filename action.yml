@@ -23,7 +23,7 @@ inputs:
 
 runs:
   using: "docker"
-  image: "docker://wolletd/clang-format:latest"
+  image: "docker://alexrichardson/clang-format:latest"
   env:
     SOURCE_REF: ${{ inputs.source-ref }}
     FETCH_DEPTH: ${{ inputs.fetch-depth }}
